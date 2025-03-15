@@ -31,6 +31,23 @@ Install the necessary libraries by running:
 pip install -r requirements.txt
 ```
 
+## How the Tool Works 📜
+#### 1. SPF, DKIM, DMARC Verification:
+The script checks the Authentication-Results header for SPF, DKIM, and DMARC results. If any of these fail, the risk score increases.
+#### 2. Sender Domain Mismatch: 
+The script compares the domain in the From header and the Return-Path header. A mismatch increases the risk score.
+#### 3. Suspicious Routing: 
+The tool checks the "Received" headers for suspicious routing behavior, such as unverified servers or unexpected hops.
+#### 4. Phishing Keywords: 
+The subject line is checked for common phishing-related terms (e.g., "urgent", "suspend", "login", etc.).
+#### 5. Suspicious Links: 
+The script analyzes URLs in the email body. It checks for:
+- URL shorteners (e.g., bit.ly, goo.gl)
+- IP addresses instead of domain names
+- Deceptive domains (e.g., "paypa1.com" instead of "paypal.com")
+#### 6. Risk Score Calculation: 
+Each indicator is assigned a risk score. If the total risk score exceeds predefined thresholds, the email is flagged as "HIGH", "MEDIUM", or "LOW" risk.
+
 ## How to Use 🖥️
 #### Option 1: Analyze an Email File
 1. Save your raw email (including headers) as a .eml file.
@@ -71,23 +88,6 @@ Findings:
 Recommendation:
 This email shows strong indicators of a phishing attempt. Do not click any links or open attachments.
 ```
-
-## How the Tool Works 📜
-#### 1. SPF, DKIM, DMARC Verification:
-The script checks the Authentication-Results header for SPF, DKIM, and DMARC results. If any of these fail, the risk score increases.
-#### 2. Sender Domain Mismatch: 
-The script compares the domain in the From header and the Return-Path header. A mismatch increases the risk score.
-#### 3. Suspicious Routing: 
-The tool checks the "Received" headers for suspicious routing behavior, such as unverified servers or unexpected hops.
-#### 4. Phishing Keywords: 
-The subject line is checked for common phishing-related terms (e.g., "urgent", "suspend", "login", etc.).
-#### 5. Suspicious Links: 
-The script analyzes URLs in the email body. It checks for:
-- URL shorteners (e.g., bit.ly, goo.gl)
-- IP addresses instead of domain names
-- Deceptive domains (e.g., "paypa1.com" instead of "paypal.com")
-#### 6. Risk Score Calculation: 
-Each indicator is assigned a risk score. If the total risk score exceeds predefined thresholds, the email is flagged as "HIGH", "MEDIUM", or "LOW" risk.
 
 ## Customization 📘
 You can customize the tool to better suit your needs by modifying:

@@ -17,7 +17,7 @@ Scans for common phishing keywords in the subject line.
 #### Suspicious Links: 
 Detects suspicious URLs and domains, including URL shorteners and deceptive domains.
 
-## Installation Instructions 📕
+## Installation Instructions 💾
 1. Clone the repository or download the script: You can either clone the repository using Git or download the Python script directly.
 
 ```bash
@@ -31,7 +31,7 @@ Install the necessary libraries by running:
 pip install -r requirements.txt
 ```
 
-## How to Use 📗
+## How to Use 🖥️
 #### Option 1: Analyze an Email File
 1. Save your raw email (including headers) as a .eml file.
 2. Run the script with the file path as an argument:
@@ -72,7 +72,7 @@ Recommendation:
 This email shows strong indicators of a phishing attempt. Do not click any links or open attachments.
 ```
 
-## How the Tool Works 📙
+## How the Tool Works 📜
 #### 1. SPF, DKIM, DMARC Verification:
 The script checks the Authentication-Results header for SPF, DKIM, and DMARC results. If any of these fail, the risk score increases.
 #### 2. Sender Domain Mismatch: 
@@ -95,7 +95,7 @@ You can customize the tool to better suit your needs by modifying:
 - Phishing Keywords: Add or remove phishing keywords in the self.phishing_keywords list.
 - Suspicious Domains: Modify the self.suspicious_tracking_domains list to include more suspicious tracking services.
 
-## Contributing 
+## Contributing 🤝
 If you'd like to contribute to the development of this tool, feel free to submit pull requests. You can:
 - Fix bugs
 - Add new features (e.g., additional checks or improvements)

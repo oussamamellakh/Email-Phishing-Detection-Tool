@@ -20,7 +20,7 @@ Detects suspicious URLs and domains, including URL shorteners and deceptive doma
 ## Installation Instructions
 Clone the repository or download the script: You can either clone the repository using Git or download the Python script directly.
 
-''' bash
+´´´bash
 git clone https://github.com/oussamamellakh/email-phishing-detection-tool
 cd email-phishing-detection-tool
-'''
+´´´

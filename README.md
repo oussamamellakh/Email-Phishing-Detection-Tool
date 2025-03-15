@@ -1,2 +1,2 @@
-* Email Phishing Detection Tool *
+* Email Phishing Detection Tool
 

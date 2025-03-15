@@ -1,7 +1,7 @@
 # Email Phishing Detection Tool
 This Python-based tool analyzes email headers to detect potential phishing attempts. It checks several aspects, including SPF, DKIM, DMARC, subject line, sender domain, routing, and suspicious links, to provide a risk score and detailed findings.
 
-## Features:
+## Features
 ### SPF Check: 
 Verifies if the email passed SPF (Sender Policy Framework) checks.
 ### DKIM Check: 

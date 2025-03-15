@@ -30,3 +30,6 @@ Install the necessary libraries by running:
 ```bash
 pip install -r requirements.txt
 ```
+
+## How to Use
+
